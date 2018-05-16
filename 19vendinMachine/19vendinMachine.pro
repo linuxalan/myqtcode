@@ -30,8 +30,7 @@ SOURCES += \
     findform.cpp \
     changepasswdform.cpp \
     addgoodsform.cpp \
-    storageform.cpp \
-    loginandregistform.cpp
+    storageform.cpp
 
 HEADERS += \
         widget.h \
@@ -39,8 +38,7 @@ HEADERS += \
     findform.h \
     changepasswdform.h \
     addgoodsform.h \
-    storageform.h \
-    loginandregistform.h
+    storageform.h
 
 FORMS += \
         widget.ui \
@@ -48,5 +46,4 @@ FORMS += \
     findform.ui \
     changepasswdform.ui \
     addgoodsform.ui \
-    storageform.ui \
-    loginandregistform.ui
+    storageform.ui
