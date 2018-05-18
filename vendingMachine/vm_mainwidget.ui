@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Vm_MainWidget</class>
+ <widget class="QWidget" name="Vm_MainWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Vm_MainWidget</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>160</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>出售商品</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_all" native="true">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>220</y>
+     <width>670</width>
+     <height>340</height>
+    </rect>
+   </property>
+   <widget class="Vm_Setting" name="widget_Setting" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>650</width>
+      <height>320</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Vm_SaleGoods" name="widget_SaleGoods" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>650</width>
+      <height>320</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Vm_FindGoods" name="widget_FindGoods" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>650</width>
+      <height>320</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Vm_AddGoods" name="widget_AddGoods" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>650</width>
+      <height>320</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Vm_StorageGoods" name="widget_StorageGoods" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>650</width>
+      <height>320</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="btn_add_goods">
+   <property name="geometry">
+    <rect>
+     <x>356</x>
+     <y>74</y>
+     <width>80</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>添加商品</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_setting">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>74</y>
+     <width>80</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>修改密码</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_sale_goods">
+   <property name="geometry">
+    <rect>
+     <x>71</x>
+     <y>74</y>
+     <width>80</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>出售商品</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_storage_goods">
+   <property name="geometry">
+    <rect>
+     <x>213</x>
+     <y>74</y>
+     <width>80</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>商品入库</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_find_goods">
+   <property name="geometry">
+    <rect>
+     <x>498</x>
+     <y>74</y>
+     <width>80</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>商品查询</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Vm_Setting</class>
+   <extends>QWidget</extends>
+   <header>modules/set_module/vm_setting.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Vm_SaleGoods</class>
+   <extends>QWidget</extends>
+   <header>modules/sale_module/vm_salegoods.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Vm_AddGoods</class>
+   <extends>QWidget</extends>
+   <header location="global">modules/sale_module/vm_addgoods.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Vm_StorageGoods</class>
+   <extends>QWidget</extends>
+   <header>modules/sale_module/vm_storagegoods.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Vm_FindGoods</class>
+   <extends>QWidget</extends>
+   <header>modules/find_module/vm_findgoods.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
