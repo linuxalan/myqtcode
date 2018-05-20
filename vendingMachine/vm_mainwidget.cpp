@@ -13,8 +13,6 @@ Vm_MainWidget::Vm_MainWidget(QWidget *parent) :
     createDateBaseList();
     //连接信号与槽
     connectSignalsToSlots();
-
-    //emit signalInitCombo();
 }
 
 Vm_MainWidget::~Vm_MainWidget()
@@ -71,7 +69,6 @@ void Vm_MainWidget::changeWidget(SELECTFORM destForm)
 
 void Vm_MainWidget::selectWidget(SELECTFORM destForm)
 {
-    qDebug() << "select form";
     switch (destForm) {
     case SALEGOODS:
         ui->widget_SaleGoods->show();
@@ -102,44 +99,44 @@ void Vm_MainWidget::createDateBaseList()
 {
     QString file = "./vendingMachine.db";
     QFileInfo info(file);
-    if(info.exists())
-    {
-        qDebug() << "Datebase exists";
-        return;
-    }
+    bool exist = info.exists();
 
     QSqlDatabase datebase = QSqlDatabase::addDatabase("QSQLITE");
     datebase.setDatabaseName(file);
+
     if(datebase.open())
     {
-        QSqlQuery query;
-        //新建商品信息表
-        QString cmd = "create table goodsinfo(id integer primary key autoincrement, type text, brand text, price real default 0, \
-        sum integer default 0, sell integet default 0, last integer default 0)";
-
-        //新建用户信息表
-        QString cmd1 = "create table userinfo(id integer primary key autoincrement, name text unique, passwd text)";
-        if(query.exec(cmd))
-            qDebug() << "create table goodsinfo success";
-        if(query.exec(cmd1))
-            qDebug() << "create table userinfo success";
-
-        QString cmd2 = "insert into goodsinfo(type, brand) values('请选择类型', '请选择品牌')";
-        if(query.exec(cmd2))
+        if(!exist)
         {
-            qDebug() << "insert first record success";
+            QSqlQuery query;
+            //新建商品信息表
+            QString cmd = "create table goodsinfo(id integer primary key autoincrement, type text, brand text, price real default 0, \
+                    sum integer default 0, sell integet default 0, last integer default 0)";
+
+            //新建用户信息表
+            QString cmd1 = "create table userinfo(id integer primary key autoincrement, name text unique, passwd text)";
+            if(query.exec(cmd))
+                qDebug() << "create table goodsinfo success";
+            if(query.exec(cmd1))
+                qDebug() << "create table userinfo success";
+
+            QString cmd2 = "insert into goodsinfo(type, brand) values('请选择类型', '请选择品牌')";
+            if(query.exec(cmd2))
+            {
+                qDebug() << "insert first record success";
+            }
+        }else
+        {
+            qDebug() << "table exist";
         }
     }else{
-        qDebug() << "Open DateBase Failed";
+        qDebug() << "open datebase failed";
     }
 }
 
 void Vm_MainWidget::connectSignalsToSlots()
 {
-    //初始化Combo
-//    connect(this, SIGNAL(signalInitCombo()), ui->widget_SaleGoods, SLOT());
-//    connect(this, SIGNAL(signalInitCombo()), ui->widget_StorageGoods, SLOT());
-//    connect(this, SIGNAL(signalInitCombo()), ui->widget_FindGoods, SLOT());
+
 }
 //END FUNCTIONS
 

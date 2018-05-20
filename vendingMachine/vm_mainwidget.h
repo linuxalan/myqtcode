@@ -28,9 +28,6 @@ public:
         SETTING
     };
 
-signals:
-    //void signalInitCombo();
-
 private slots:
     void on_btn_sale_goods_clicked();
     void on_btn_storage_goods_clicked();

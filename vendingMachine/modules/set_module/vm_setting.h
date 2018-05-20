@@ -2,6 +2,8 @@
 #define VM_SETTING_H
 
 #include <QWidget>
+#include <QSqlQuery>
+#include <QDebug>
 
 namespace Ui {
 class Vm_Setting;
